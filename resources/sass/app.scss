@@ -1,13 +1,9 @@
-$theme-colors:(
-    "primary": #521751,
-);
-
-
- 
-
-// Fonts
-@import url('https://fonts.googleapis.com/css?family=Nunito');
-
+//
+.container {
+    margin-right: 10px;
+    margin-left: 10px;
+}
 // Variables
+@import '_variables.scss';
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
