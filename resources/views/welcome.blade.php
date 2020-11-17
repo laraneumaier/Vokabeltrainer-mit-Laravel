@@ -1,3 +1,7 @@
-@include('layouts.welcome')
+@extends ('layouts.main')
 
-  <h1> hallo </h1>
+@section('content')
+
+
+
+@endsection

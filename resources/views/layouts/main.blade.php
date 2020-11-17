@@ -23,11 +23,7 @@
     <div class="fluid">
         <nav class="navbar navbar-expand-md bg-primary navbar-dark py-sm-3 ">
             <div class="container">
-                @if (Auth::check())
-                    <a class="navbar-brand mr-auto" href="{{ url('/home') }}">  Vokabeltrainer </a>
-                @else
                     <a class="navbar-brand mr-auto" href="{{ url('/') }}">  Vokabeltrainer </a>
-                @endif
                     
                
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -75,7 +71,7 @@
             </div>
         </nav>
 
-        <main class="py-4">
+        <main class="">
             @yield('content')
         </main>
     </div>
