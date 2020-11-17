@@ -1,10 +1,11 @@
-//
-
-
 // Variables
 @import '_variables.scss';
-.sidebar{
+
+// Classes
+
+.backgroundcolor-blue{
     background-color: $blue;
 }
+
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';

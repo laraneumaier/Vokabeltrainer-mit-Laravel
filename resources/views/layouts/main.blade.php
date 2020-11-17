@@ -19,7 +19,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
-<body>
+<body class="flex d-flex flex-column min-vh-100">
     <div class="fluid">
         <nav class="navbar navbar-expand-md bg-primary navbar-dark py-sm-3 ">
             <div class="container">
@@ -74,6 +74,11 @@
         <main class="">
             @yield('content')
         </main>
+        <footer id="sticky-footer" class="py-4 bg-primary text-white mt-auto">
+        <div class="container text-center">
+        <small>Copyright &copy; Vokabeltrainer</small>
+        </div>
+  </footer>
     </div>
 </body>
 </html>
