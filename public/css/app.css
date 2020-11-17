@@ -1,8 +1,7 @@
 @charset "UTF-8";
 
-.container {
-  margin-right: 10px;
-  margin-left: 10px;
+.sidebar {
+  background-color: #0e77978e;
 }
 
 /*!
@@ -13,7 +12,7 @@
  */
 
 :root {
-  --blue: #0655e7;
+  --blue: #0e77978e;
   --indigo: #6574cd;
   --purple: #9561e2;
   --pink: #f66d9b;

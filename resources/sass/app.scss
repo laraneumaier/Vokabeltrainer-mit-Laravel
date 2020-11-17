@@ -1,9 +1,10 @@
 //
-.container {
-    margin-right: 10px;
-    margin-left: 10px;
-}
+
+
 // Variables
 @import '_variables.scss';
+.sidebar{
+    background-color: $blue;
+}
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
