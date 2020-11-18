@@ -75,10 +75,10 @@
             @yield('content')
         </main>
         <footer id="sticky-footer" class="py-4 bg-primary text-white mt-auto">
-        <div class="container text-center">
-        <small>Copyright &copy; Vokabeltrainer</small>
-        </div>
-  </footer>
+            <div class="container text-center">
+                 <small>Copyright &copy; Vokabeltrainer</small>
+            </div>
+        </footer>
     </div>
 </body>
 </html>

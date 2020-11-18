@@ -19,9 +19,14 @@ use App\Http\Controllers\VocabController;
 Route::resource('vocabs', VocabController::class);
 
 Route::get('/', function () {
-    return view('welcome');
+    if (Auth::check()){
+        return redirect('/home');
+    } else{
+        return view('welcome');
+    }
 });
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
