@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VocabController;
+use App\Http\Controllers\CategoryController;
+
 
   
 
@@ -17,6 +19,8 @@ use App\Http\Controllers\VocabController;
 */
   
 Route::resource('vocabs', VocabController::class);
+Route::resource('categories', CategoryController::class);
+
 
 Route::get('/', function () {
     if (Auth::check()){
