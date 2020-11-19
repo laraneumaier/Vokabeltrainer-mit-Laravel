@@ -24,7 +24,7 @@ class CategoryController extends Controller
             $user_id = Auth::user()->id;
             $input['user_id'] = $user_id;
             Category::create($input);
-            return view('vocabs.create');
+            return redirect ('vocabs/create');
 
             
         } else {
