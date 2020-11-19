@@ -18,7 +18,6 @@ use App\Http\Controllers\CategoryController;
 |
 */
   
-Route::resource('vocabs', VocabController::class);
 Route::resource('categories', CategoryController::class);
 
 
@@ -30,6 +29,9 @@ Route::get('/', function () {
     }
 });
 
+Route::get('vocabs/create', function () {
+    return view('vocabs.create');
+});
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

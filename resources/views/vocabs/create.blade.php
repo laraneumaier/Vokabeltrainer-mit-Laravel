@@ -1,5 +1,5 @@
-@extends('layout.home')
+@extends('layouts.home')
   
-@section('content')
+@section('pcontent')
 <h1> Vokabeln hinzufügen </h2>
 @endsection
