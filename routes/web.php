@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VocabController;
-use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\LernsettController;
 
 
   
@@ -18,7 +18,7 @@ use App\Http\Controllers\CategoryController;
 |
 */
   
-Route::resource('categories', CategoryController::class);
+Route::resource('lernsetts', LernsettController::class);
 
 
 Route::get('/', function () {
