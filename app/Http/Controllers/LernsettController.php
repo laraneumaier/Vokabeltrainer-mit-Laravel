@@ -13,9 +13,9 @@ class LernsettController extends Controller
 {
     public function index(){
         $user_id =Auth::user()->id;
-        $lernstts = Lernsett::all()->where('user_id', $user_id);
+        $lernsetts = Lernsett::all()->where('user_id', $user_id);
     
-        return view('lernsett.index',compact('lernsett'));
+        return view('lernsetts.index',compact('lernsetts'));
 
     }
     public function store(Request $request)
