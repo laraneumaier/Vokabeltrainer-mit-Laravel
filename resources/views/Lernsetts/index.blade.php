@@ -23,9 +23,15 @@
                         <div class="col-3 my-auto">
                             <h2 class="card-text">{{$lernsett->name}}</h2>                          
                         </div>
-                        <div class="col-9 justify-content-end float-right">
-                            <a  id="singlebutton" class="btn btn-primary center-block float-right m-2" href="{{ route('register') }}"> Vokabeln ansehen</a>                       
-                            <a  id="singlebutton" class="btn btn-primary  center-block float-right m-2 " href="{{ route('register') }}">Vokabeln bearbeiten</a>                         
+                        <div class="col-3  float-right">
+                            <a  id="singlebutton" class="btn btn-primary center-block float-right m-2" href="{{ route('register') }}"> Vokabeln ansehen</a>    
+                        </div>   
+                        <div class="col-3 float-right">
+                            <a  id="singlebutton" class="btn btn-primary  center-block float-right m-2 " href="{{ route('register') }}">Vokabeln bearbeiten</a> 
+                        </div>
+                        <div class="col-3  float-right">
+                        @csrf 
+                        @method('DELETE')
                             <a  id="singlebutton" class="btn btn-outline-primary center-block float-right m-2 " href="{{ route('register') }}"> Lernsett löschen</a>                         
                         </div>
                     </div>

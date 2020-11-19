@@ -29,7 +29,10 @@ class LernsettController extends Controller
             return redirect ('vocabs/create');
             
         } else {
-                echo "du bist nicht angemeldt";
+                return redirect ('login');
             }         
+    }
+    public function delete(Lernsett $lernsetts){
+        $lernsetts->delete();
     }
 }
