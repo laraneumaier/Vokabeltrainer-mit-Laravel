@@ -9,6 +9,9 @@
                   <strong>Name</strong>
                   <input type="text" name="name" class="form-control" placeholder="Name">
                </div>
+               @error('name')
+                    <strong>{{ $message }}</strong>
+                @enderror
          </div>
          <div class="col-xs-12 col-sm-12 col-md-12 text-center">
                   <button type="submit" class="btn btn-primary">Submit</button>

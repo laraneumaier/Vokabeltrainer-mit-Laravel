@@ -24,16 +24,19 @@
                             <h2 class="card-text">{{$lernsett->name}}</h2>                          
                         </div>
                         <div class="col-3  float-right">
-                            <a  id="singlebutton" class="btn btn-primary center-block float-right m-2" href="{{ route('register') }}"> Vokabeln ansehen</a>    
+                            <a class="btn btn-primary center-block float-right m-2" href="{{ route('register') }}"> Vokabeln ansehen</a>    
                         </div>   
                         <div class="col-3 float-right">
-                            <a  id="singlebutton" class="btn btn-primary  center-block float-right m-2 " href="{{ route('register') }}">Vokabeln bearbeiten</a> 
+                            <a   class="btn btn-primary  center-block float-right m-2 " href="{{ route('register') }}">Vokabeln bearbeiten</a> 
                         </div>
-                        <div class="col-3  float-right">
-                        @csrf 
-                        @method('DELETE')
-                            <a  id="singlebutton" class="btn btn-outline-primary center-block float-right m-2 " href="{{ route('register') }}"> Lernsett löschen</a>                         
-                        </div>
+                        <form action="{{ route('lernsetts.destroy',$lernsett->id) }}" method="POST">
+                            <div class="col-3  float-right">
+                                @csrf
+                                @method('DELETE')
+        
+                                <button type="submit" class="btn btn-danger">Delete</button>                        
+                            </div>
+                        </form>
                     </div>
                     @endforeach  
     

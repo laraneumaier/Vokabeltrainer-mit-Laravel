@@ -21,6 +21,8 @@ use App\Http\Controllers\LernsettController;
 Route::resource('lernsetts', LernsettController::class);
 
 
+
+
 Route::get('/', function () {
     if (Auth::check()){
         return redirect('/home');
