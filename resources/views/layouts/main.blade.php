@@ -71,7 +71,7 @@
             </div>
         </nav>
 
-        <main class="">
+        <main class="overflow-hidden">
             @yield('content')
         </main>
         <footer id="sticky-footer" class="py-4 bg-primary text-white mt-auto">

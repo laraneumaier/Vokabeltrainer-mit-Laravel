@@ -10,7 +10,7 @@
         </div>
         <div class="row">
             <div class="col text-center mt-5">
-                <a  id="singlebutton" class="btn btn-outline-primary p-3 px-4 center-block btn-lg" href="{{ route('login') }}"> Jetzt loslegen </a>
+                <a  id="singlebutton" class="btn btn-outline-primary p-3 px-4 center-block btn-lg" href="{{ route('register') }}"> Jetzt loslegen </a>
             </div> 
         </div>
     </div>
@@ -19,8 +19,8 @@
     </div>
 </div>
 </div class="row mx-auto">
-    <div class="col mt-sm-5  d-flex justify-content-center ">
-         <h3 class="pt-5">Mit diesem Vokabeltrainer geht nichts mehr schief!</h3>
+    <div class="col my-sm-4  d-flex justify-content-center ">
+         <h3 class="py-3">Mit diesem Vokabeltrainer geht nichts mehr schief!</h3>
     </div>
 </div>
 @endsection
