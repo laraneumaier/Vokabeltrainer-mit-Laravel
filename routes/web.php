@@ -21,7 +21,6 @@ use App\Http\Controllers\LernsetController;
 Route::resource('lernsets', LernsetController::class);
 
 
-Route::post('lernsets/{id}', LernsetController::class);
 
 Route::get('/', function () {
     if (Auth::check()){
@@ -31,9 +30,10 @@ Route::get('/', function () {
     }
 });
 
-Route::get('vocabs/create', function () {
+Route::get('lernsets/{id}', function () {
     return view('vocabs.create');
 });
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

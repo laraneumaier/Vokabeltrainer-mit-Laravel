@@ -23,9 +23,9 @@ class LernsetController extends Controller
         $lernsets = Lernset::all()->where('user_id', $user_id);
     
         return view('lernsets.index',compact('lernsets'));
-
     }
-    public function store(Request $request, $id)
+
+    public function store(Request $request, Lernset $lernset)
     {
         $request->validate([
             'name' => 'required',
@@ -37,10 +37,8 @@ class LernsetController extends Controller
             $user_id = Auth::user()->id;
             $input['user_id'] = $user_id;
             $lernset = Lernset::create($input);
-            $id = $lernset->id();
             
-            return view('lernsets', ['id' => $id]);
-
+            return view('vocabs.create',compact('lernset'));
 
 
         } else {
