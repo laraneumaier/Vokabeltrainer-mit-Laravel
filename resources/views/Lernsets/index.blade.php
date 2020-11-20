@@ -20,8 +20,11 @@
                         <div class="col-sm-3 my-auto">
                             <h2 class="card-text">{{$lernset->name}}</h2>                          
                         </div>
-                        <div class="col offset-5 justify-content-end">
-                            <a   class="btn btn-primary  center-block m-2 " href="{{ route('lernsets.vocabs.create',$lernset->id) }}">Vokabeln</a> 
+                        <div class="col justify-content-end">
+                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.vocabs.create',$lernset->id) }}">Vokabeln hinzufügen</a> 
+                        </div>
+                        <div class="col justify-content-end">
+                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('',$lernset->id) }}">Vokabeln einsehen</a> 
                         </div>
                         <form action="{{ route('lernsets.destroy',$lernset->id) }}" class="" method="POST">
                             <div class="col justify-content-end ">
