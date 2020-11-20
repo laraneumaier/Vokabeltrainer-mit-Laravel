@@ -5,7 +5,7 @@
    <h1 class="mt-5"> Herzlich Willkommen {{Auth::user()->name}}!</h1>
 </div>
 
-<x-createlernsett/>
+<x-createlernset/>
 
 
 @endsection

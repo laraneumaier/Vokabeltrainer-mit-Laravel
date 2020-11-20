@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VocabController;
-use App\Http\Controllers\LernsettController;
+use App\Http\Controllers\LernsetController;
 
 
   
@@ -18,7 +18,7 @@ use App\Http\Controllers\LernsettController;
 |
 */
   
-Route::resource('lernsetts', LernsettController::class);
+Route::resource('lernsets', LernsetController::class);
 
 
 

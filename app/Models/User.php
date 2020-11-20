@@ -35,8 +35,8 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function lernsett(){
-        return $this->hasMany(Lernsett::class);
+    public function lernset(){
+        return $this->hasMany(Lernset::class);
     }
 
 

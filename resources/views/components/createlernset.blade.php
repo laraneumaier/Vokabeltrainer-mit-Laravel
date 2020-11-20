@@ -1,7 +1,7 @@
 <div class="row">
    <div class="col p-5 m-5 bg-light">
       <h2>Lernset erstellen</h2>
-      <form action="{{ route('lernsetts.store') }}" method="POST">
+      <form action="{{ route('lernsets.store') }}" method="POST">
       @csrf
       <div class="row">
          <div class="col-xs-12 col-sm-12 col-md-12">

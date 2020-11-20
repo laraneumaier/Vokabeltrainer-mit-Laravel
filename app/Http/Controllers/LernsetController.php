@@ -5,11 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Redirect;
 
-use App\Models\Lernsett;
+use App\Models\Lernset;
 use Auth;
 use App\Http\Controllers\VocabController;
 
-class LernsettController extends Controller
+class LernsetController extends Controller
 {
     public function __construct()
     {
@@ -20,9 +20,9 @@ class LernsettController extends Controller
     
     public function index(){
         $user_id =Auth::user()->id;
-        $lernsetts = Lernsett::all()->where('user_id', $user_id);
+        $lernsets = Lernset::all()->where('user_id', $user_id);
     
-        return view('lernsetts.index',compact('lernsetts'));
+        return view('lernsets.index',compact('lernsets'));
 
     }
     public function store(Request $request)
@@ -36,18 +36,18 @@ class LernsettController extends Controller
             $input = $request->all();
             $user_id = Auth::user()->id;
             $input['user_id'] = $user_id;
-            Lernsett::create($input);
-            return redirect ('vocabs/create')->with('success','Du hast dein Lernsett erfolgreich erstellt.');
+            Lernset::create($input);
+            return redirect ('vocabs/create')->with('success','Du hast dein Lernset erfolgreich erstellt.');
             
         } else {
                 return redirect ('login');
             }         
     }
-    public function destroy(Lernsett $lernsett)
+    public function destroy(Lernset $lernset)
     {
-        $lernsett->delete();
+        $lernset->delete();
     
-        return redirect()->route('lernsetts.index')
+        return redirect()->route('lernsets.index')
                         ->with('success','Vocab deleted successfully');
     }
     
