@@ -36,8 +36,10 @@ class LernsetController extends Controller
             $input = $request->all();
             $user_id = Auth::user()->id;
             $input['user_id'] = $user_id;
-            Lernset::create($input);
-            return redirect ('vocabs/create')->with('success','Du hast dein Lernset erfolgreich erstellt.');
+            $lernsets = Lernset::create($input);
+            $id = $lernsets->id();
+            
+            return View('lernsetts/{id}');
             
         } else {
                 return redirect ('login');

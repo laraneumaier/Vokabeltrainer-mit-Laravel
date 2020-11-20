@@ -16,19 +16,9 @@ class VocabController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'name' => 'required',
+            'german' => 'required',
+            'translation' => 'required',
         ]);
-
-        if (Auth::check())
-            {
-            $input = $request->all();
-            $user_id = Auth::user()->id;
-            $input['user_id'] = $user_id;
-            Lernset::create($input);
-            return redirect ('vocabs/create')->with('success','Du hast dein Lernset erfolgreich erstellt.');
-            
-        } else {
-                return redirect ('login');
-            }         
+    
     }
 }
