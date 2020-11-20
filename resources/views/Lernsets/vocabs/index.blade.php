@@ -18,30 +18,29 @@
         </div>
     @endif
    
-    <table class="table table-bordered">
+    <table class="table table-bordered mx-5">
         <tr>
-            <th>Nummer</th>
             <th>Deutsch</th>
             <th>Übersetzung</th>
             <th>Handlung</th>
-        </tr>
-        @foreach ($vocabs as $vocab)
-        <tr>
-            <td>{{ ++$i }}</td>
-            <td>{{ $vocab->german }}</td>
-            <td>{{ $vocab->translation }}</td>
-            <td>
-                <form action="" method="POST">
-   
-                    <a class="btn btn-info" href="">Show</a>
+            </tr>
+            @foreach ($vocabs as $vocab)
+            <tr>
+                <td>{{ $vocab->german }}</td>
+                <td>{{ $vocab->translation }}</td>
+                <td>
+                    <form action="" method="POST">
     
-                    <a class="btn btn-primary" href="">Edit</a>
-   
-      
-                    <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
-            </td>
-        </tr>
+                        <a class="btn btn-info" href="">Show</a>
+        
+                        <a class="btn btn-primary" href="">Edit</a>
+    
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
         @endforeach
     </table>
   
