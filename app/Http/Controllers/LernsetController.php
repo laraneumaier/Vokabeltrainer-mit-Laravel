@@ -39,7 +39,7 @@ class LernsetController extends Controller
             $lernset = Lernset::create($input);
             
 
-            return view('lernsets.show',compact('lernset'));
+            return redirect()->route('lernsets.show',compact('lernset'));
 
 
         } else {
