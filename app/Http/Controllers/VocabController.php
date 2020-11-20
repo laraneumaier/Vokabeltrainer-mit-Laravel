@@ -14,12 +14,16 @@ class VocabController extends Controller
 
     }
 
+
     public function store(Request $request)
     {
         $request->validate([
             'german' => 'required',
             'translation' => 'required',
         ]);
+
+        echo $request->route('id');
     }
+
 
 }

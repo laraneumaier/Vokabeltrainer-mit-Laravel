@@ -19,6 +19,7 @@ use App\Http\Controllers\LernsetController;
 */
   
 Route::resource('lernsets', LernsetController::class);
+Route::resource('vocabs', VocabController::class);
 
 
 

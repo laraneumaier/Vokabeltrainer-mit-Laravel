@@ -12,4 +12,6 @@ class Vocab extends Model
     public function Lernsets(){
         return $this->belongsTo(Lernset::class);
     }
+
+    
 }
