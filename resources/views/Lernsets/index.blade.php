@@ -21,13 +21,13 @@
                             <h2 class="card-text">{{$lernset->name}}</h2>                          
                         </div>
                         <div class="col offset-5 justify-content-end">
-                            <a   class="btn btn-primary  center-block m-2 " href="{{ route('register') }}">Vokabeln bearbeiten</a> 
+                            <a   class="btn btn-primary  center-block m-2 " href="{{ route('register') }}">Vokabeln</a> 
                         </div>
                         <form action="{{ route('lernsets.destroy',$lernset->id) }}" class="" method="POST">
                             <div class="col justify-content-end ">
                                 @csrf
                                 @method('DELETE')
-                                <button type="submit" class="btn btn-outline-danger center-block  m-2 ">Delete</button>                        
+                                <button type="submit" class="btn btn-outline-danger center-block  m-2 ">Lernset löschen</button>                        
                             </div>
                         </form>
                     </div>
