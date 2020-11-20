@@ -33,7 +33,7 @@
             <td>{{ $vocab->translation }}</td>
             <td>{{ $vocab->category }}</td>
             <td>
-                <form action="{{ route('vocabs.destroy',$vocab->id) }}" method="POST">
+                <form action="{{ route('vocabs.destroy}}" method="POST">
    
                     <a class="btn btn-info" href="{{ route('vocabs.show',$vocab->id) }}">Show</a>
     

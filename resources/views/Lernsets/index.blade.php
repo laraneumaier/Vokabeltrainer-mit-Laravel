@@ -21,7 +21,7 @@
                             <h2 class="card-text">{{$lernset->name}}</h2>                          
                         </div>
                         <div class="col offset-5 justify-content-end">
-                            <a   class="btn btn-primary  center-block m-2 " href="{{ route('register') }}">Vokabeln</a> 
+                            <a   class="btn btn-primary  center-block m-2 " href="{{ route('lernsets.show',$lernset->id) }}">Vokabeln</a> 
                         </div>
                         <form action="{{ route('lernsets.destroy',$lernset->id) }}" class="" method="POST">
                             <div class="col justify-content-end ">

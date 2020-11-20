@@ -52,5 +52,9 @@ class LernsetController extends Controller
         return redirect()->route('lernsets.index')
                         ->with('success','Vocab deleted successfully');
     }
+    public function show(Lernset $lernset)
+    {
+        return view('lernsets.show',compact('lernset'));
+    } 
     
 }

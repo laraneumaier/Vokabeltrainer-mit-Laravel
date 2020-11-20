@@ -13,12 +13,13 @@ class VocabController extends Controller
         $this->middleware('throttle:1000,1');
 
     }
+
     public function store(Request $request)
     {
         $request->validate([
             'german' => 'required',
             'translation' => 'required',
         ]);
-    
     }
+
 }
