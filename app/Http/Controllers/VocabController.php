@@ -20,21 +20,18 @@ class VocabController extends Controller
         echo "hallo";
     }
 
+    public function create($lernset_id)
+    {
+        return view('lernsets.vocabs.create', compact('lernset_id'));
+    }
 
-
-    public function store(Request $request)
+    public function store($lernset_id, Request $request)
     {
         $request->validate([
             'german' => 'required',
             'translation' => 'required',
         ]);
-
-        $input = $request->all();
-        $vocab = Vocab::create($input);
-
-        return redirect()->route('vocabs.index');
+        Vocab::create($request->all() + ['lernset_id' => $lernset_id]);
+        return redirect()->route('lernsets.vocabs.create', $lernset_id);
         }
-    
-
-
 }

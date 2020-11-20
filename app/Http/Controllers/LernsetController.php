@@ -38,7 +38,8 @@ class LernsetController extends Controller
             $input['user_id'] = $user_id;
             $lernset = Lernset::create($input);
             
-            return view('vocabs.create',compact('lernset'));
+
+            return view('lernsets.show',compact('lernset'));
 
 
         } else {
@@ -52,9 +53,10 @@ class LernsetController extends Controller
         return redirect()->route('lernsets.index')
                         ->with('success','Vocab deleted successfully');
     }
-    public function show(Lernset $lernset)
-    {
-        return view('lernsets.show',compact('lernset'));
-    } 
+
+    public function show($lernset_id){
+        return redirect()->route('lernsets.vocabs.create', $lernset_id);
+    }
+
     
 }

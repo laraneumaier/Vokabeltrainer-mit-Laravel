@@ -7,7 +7,7 @@
                 <h2> Show Vocab</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('vocabs.index') }}"> Back</a>
+                <a class="btn btn-primary" href="{{ route('lernsets.vocabs.index') }}"> Back</a>
             </div>
         </div>
     </div>

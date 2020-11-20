@@ -7,7 +7,7 @@
                 <h2>Vocabs</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('vocabs.create') }}"> Create New Vocab</a>
+                <a class="btn btn-success" href="{{ route('lernsets.vocabs.create') }}"> Create New Vocab</a>
             </div>
         </div>
     </div>
