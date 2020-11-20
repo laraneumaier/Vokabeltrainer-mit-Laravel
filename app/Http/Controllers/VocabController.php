@@ -1,4 +1,6 @@
 <?php
+
+// https://laraveldaily.com/nested-resource-controllers-and-routes-laravel-crud-example/
   
 namespace App\Http\Controllers;
    
@@ -16,8 +18,10 @@ class VocabController extends Controller
         $this->middleware('throttle:1000,1');
 
     }
-    public function index(){
-        echo "hallo";
+   
+    public function index($lernset_id){
+        $vocabs =  Vocab::all()->where('lernset_id', $lernset_id); // lernset or Vocab
+        return view('lernsets.vocabs.index', compact('vocabs', 'lernset_id'));
     }
 
     public function create($lernset_id)
@@ -32,6 +36,6 @@ class VocabController extends Controller
             'translation' => 'required',
         ]);
         Vocab::create($request->all() + ['lernset_id' => $lernset_id]);
-        return redirect()->route('lernsets.vocabs.create', $lernset_id);
+        return redirect()->route('lernsets.vocabs.create', $lernset_id)->with('success','Vocab wurde erstellt.'); 
         }
 }

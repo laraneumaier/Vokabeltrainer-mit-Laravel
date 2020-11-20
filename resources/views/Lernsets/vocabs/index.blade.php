@@ -1,13 +1,13 @@
-@extends('vocabs.layout')
+@extends('layouts.home')
  
-@section('content')
+@section('pcontent')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
                 <h2>Vocabs</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('lernsets.vocabs.create') }}"> Create New Vocab</a>
+                <a class="btn btn-success" href="{{ route('lernsets.vocabs.create', $lernset_id) }}"> Create New Vocab</a>
             </div>
         </div>
     </div>
@@ -20,10 +20,10 @@
    
     <table class="table table-bordered">
         <tr>
-            <th>No</th>
-            <th>german</th>
-            <th>translation</th>
-            <th>category</th>
+            <th>Nummer</th>
+            <th>Deutsch</th>
+            <th>Übersetzung</th>
+            <th>Handlung</th>
             <th width="280px">Action</th>
         </tr>
         @foreach ($vocabs as $vocab)
@@ -45,6 +45,5 @@
         @endforeach
     </table>
   
-    {!! $vocabs->links() !!}
       
 @endsection

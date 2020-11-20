@@ -24,7 +24,7 @@
                             <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.vocabs.create',$lernset->id) }}">Vokabeln hinzufügen</a> 
                         </div>
                         <div class="col justify-content-end">
-                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('',$lernset->id) }}">Vokabeln einsehen</a> 
+                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.vocabs.index',$lernset->id) }}">Vokabeln einsehen</a> 
                         </div>
                         <form action="{{ route('lernsets.destroy',$lernset->id) }}" class="" method="POST">
                             <div class="col justify-content-end ">

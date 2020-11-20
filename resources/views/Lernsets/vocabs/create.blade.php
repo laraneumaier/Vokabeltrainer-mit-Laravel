@@ -2,7 +2,11 @@
   
 @section('pcontent')
 <h1>  Vokabeln hinzufügen </h2>
-
+@if ($message = Session::get('success'))
+        <div class="alert alert-success">
+            <p>{{ $message }}</p>
+        </div>
+    @endif
 <form action="{{route('lernsets.vocabs.store', $lernset_id )}}" method="POST">
 @csrf
   <div class="row my-3 mx-5">
