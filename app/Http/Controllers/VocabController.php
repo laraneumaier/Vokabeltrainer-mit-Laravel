@@ -37,5 +37,14 @@ class VocabController extends Controller
         ]);
         Vocab::create($request->all() + ['lernset_id' => $lernset_id]);
         return redirect()->route('lernsets.vocabs.create', $lernset_id)->with('success','Vocab wurde erstellt.'); 
-        }
+    }
+
+    public function destroy($lernset_id, Vocab $vocab)
+    {
+        $vocab->delete();
+        return redirect()->route('lernsets.vocabs.index',  $lernset_id)->with('success','Die Vokabel wurde gelöscht');
+
+                        
+    }
+
 }

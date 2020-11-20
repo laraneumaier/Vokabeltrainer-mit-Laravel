@@ -4,10 +4,10 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Vocabs</h2>
+                <h1>Vocabs</h1>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('lernsets.vocabs.create', $lernset_id) }}"> Create New Vocab</a>
+                <a class="btn btn-primary" href="{{ route('lernsets.vocabs.create', $lernset_id) }}"> Create New Vocab</a>
             </div>
         </div>
     </div>
@@ -29,9 +29,7 @@
                 <td>{{ $vocab->german }}</td>
                 <td>{{ $vocab->translation }}</td>
                 <td>
-                    <form action="" method="POST">
-    
-                        <a class="btn btn-info" href="">Show</a>
+                    <form action="{{ route('lernsets.vocabs.destroy', [$vocab->lernset_id, $vocab->id] )}}" class="" method="POST">
         
                         <a class="btn btn-primary" href="">Edit</a>
     
