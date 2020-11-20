@@ -16,4 +16,8 @@ class Lernset extends Model
     public function user(){
         return $this->belongsTo(User::class);
     }
+
+    public function vocabs(){
+        return $this->hasMany(Vocab::class);
+    }
 }
