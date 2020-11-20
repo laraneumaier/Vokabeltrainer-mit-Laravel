@@ -13,6 +13,10 @@ class VocabController extends Controller
         $this->middleware('throttle:1000,1');
 
     }
+    public function index(){
+
+    }
+
 
 
     public function store(Request $request)
@@ -22,7 +26,12 @@ class VocabController extends Controller
             'translation' => 'required',
         ]);
 
-        echo $request->route('id');
+        $input = $request->all();
+        $lernset_id = $request->route('id');
+        $input['lernset_id'] = $request->route('id');
+            $lernset = Lernset::create($input);
+
+        return view('vocab.create');
     }
 
 

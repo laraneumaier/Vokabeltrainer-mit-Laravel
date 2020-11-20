@@ -31,9 +31,6 @@ Route::get('/', function () {
     }
 });
 
-Route::get('lernsets/{id}', function () {
-    return view('vocabs.create');
-});
 
 Auth::routes();
 
