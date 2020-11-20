@@ -13,5 +13,12 @@ class Vocab extends Model
         return $this->belongsTo(Lernset::class);
     }
 
+    protected $fillable = [
+        'german',
+        'translation',
+        'lernset_id'
+        ];
+
+
     
 }

@@ -4,6 +4,9 @@ namespace App\Http\Controllers;
    
 use App\Models\Vocab;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Redirect;
+use App\Models\Lernset;
+
   
 class VocabController extends Controller
 {
@@ -14,7 +17,7 @@ class VocabController extends Controller
 
     }
     public function index(){
-
+        echo "hallo";
     }
 
 
@@ -27,12 +30,11 @@ class VocabController extends Controller
         ]);
 
         $input = $request->all();
-        $lernset_id = $request->route('id');
-        $input['lernset_id'] = $request->route('id');
-            $lernset = Lernset::create($input);
+        $vocab = Vocab::create($input);
 
-        return view('vocab.create');
-    }
+        return redirect()->route('vocabs.index');
+        }
+    
 
 
 }
