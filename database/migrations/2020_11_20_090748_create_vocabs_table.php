@@ -15,7 +15,11 @@ class CreateVocabsTable extends Migration
     {
         Schema::create('vocabs', function (Blueprint $table) {
             $table->id();
+            $table->string('german');
+            $table->string('translation');
+            $table->bigInteger('lernset_id')->unsigned();
             $table->timestamps();
+            $table->foreign('lernset_id')->references('id')->on('lernsets')->onDelete('cascade');
         });
     }
 
