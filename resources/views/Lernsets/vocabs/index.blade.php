@@ -24,10 +24,10 @@
             <th>Deutsch</th>
             <th>Übersetzung</th>
             <th>Handlung</th>
-            <th width="280px">Action</th>
         </tr>
         @foreach ($vocabs as $vocab)
         <tr>
+            <td>{{ ++$i }}</td>
             <td>{{ $vocab->german }}</td>
             <td>{{ $vocab->translation }}</td>
             <td>
