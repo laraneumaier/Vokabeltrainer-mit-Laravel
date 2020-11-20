@@ -21,7 +21,7 @@ use App\Http\Controllers\LernsetController;
 Route::resource('lernsets', LernsetController::class);
 
 
-
+Route::post('lernsets/{id}', LernsetController::class);
 
 Route::get('/', function () {
     if (Auth::check()){

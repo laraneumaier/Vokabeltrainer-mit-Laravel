@@ -25,7 +25,7 @@ class LernsetController extends Controller
         return view('lernsets.index',compact('lernsets'));
 
     }
-    public function store(Request $request)
+    public function store(Request $request, $id)
     {
         $request->validate([
             'name' => 'required',
@@ -36,11 +36,13 @@ class LernsetController extends Controller
             $input = $request->all();
             $user_id = Auth::user()->id;
             $input['user_id'] = $user_id;
-            $lernsets = Lernset::create($input);
-            $id = $lernsets->id();
+            $lernset = Lernset::create($input);
+            $id = $lernset->id();
             
-            return View('lernsetts/{id}');
-            
+            return view('lernsets', ['id' => $id]);
+
+
+
         } else {
                 return redirect ('login');
             }         
