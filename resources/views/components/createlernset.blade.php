@@ -6,7 +6,7 @@
       <div class="row">
          <div class="col-xs-12 col-sm-12 col-md-12">
                <div class="form-group">
-                  <strong>Name</strong>
+                  <strong>Neues Lernset</strong>
                   <input type="text" name="name" class="form-control" placeholder="Name">
                </div>
                @error('name')
@@ -14,7 +14,7 @@
                 @enderror
          </div>
          <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                  <button type="submit" class="btn btn-primary" >Submit</button>
+                  <button type="submit" class="btn btn-primary" >Erstellen</button>
          </div>
       </div>
    </form>

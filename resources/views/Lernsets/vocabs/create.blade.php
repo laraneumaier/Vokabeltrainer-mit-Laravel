@@ -11,7 +11,7 @@
         </div>
     @endif
 <form action="{{route('lernsets.vocabs.store', $lernset_id )}}" class="my-3 mx-5" method="POST">
-@csrf
+  @csrf
   <div class="row my-3">
       <div class="col">
       <label for="german">Deutsch</label>
@@ -24,14 +24,11 @@
   </div>
   <div class="row mt-2 text-block">
     <div class="col btn-block ">
-            <a class="btn btn-outline-primary  center-block float-right" href="{{ route('lernsets.index')}}">Fertig</a> 
-            <button type="submit" class="btn btn-primary mx-1 float-right">Hinzufügen</button>
-
+      <a class="btn btn-outline-primary  center-block float-right" href="{{ route('lernsets.index')}}">Fertig</a> 
+      <button type="submit" class="btn btn-primary mx-1 float-right">Hinzufügen</button>
     </div>
   </div>
 </form>
-<div class="row mt-2">
-  
-</div>
+
   
 @endsection
