@@ -4,6 +4,10 @@
   font-size: 2.5rem;
 }
 
+#translation {
+  visibility: hidden;
+}
+
 .backgroundcolor-blue {
   background-color: #a692c4;
 }

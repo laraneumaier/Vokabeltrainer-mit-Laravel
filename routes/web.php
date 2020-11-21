@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\VocabController;
 use App\Http\Controllers\LernsetController;
+use App\Http\Controllers\PractiseController;
+
 
 
   
@@ -21,6 +23,12 @@ use App\Http\Controllers\LernsetController;
 Route::resource('lernsets', LernsetController::class);
 
 Route::resource('lernsets.vocabs', VocabController::class);
+
+Route::resource('lernsets.practise', PractiseController::class);
+
+
+
+
 
 /* index ($ country_id) - GET-Anfrage an / Länder / X / Städte
 create ($ country_id) - GET-Anfrage an / Countries / X / Cities / Create
@@ -44,4 +52,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
 

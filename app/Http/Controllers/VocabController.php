@@ -43,10 +43,8 @@ class VocabController extends Controller
     {
         $vocab->delete();
         return redirect()->route('lernsets.vocabs.index',  $lernset_id)->with('success','Die Vokabel wurde gelöscht');
-
                         
     }
-
     public function edit($lernset_id, vocab $vocab)
     {
         return view('lernsets.vocabs.edit', compact('lernset_id', 'vocab'));

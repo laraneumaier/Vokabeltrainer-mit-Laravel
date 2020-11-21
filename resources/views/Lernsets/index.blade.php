@@ -21,7 +21,7 @@
                             <h2 class="card-text">{{$lernset->name}}</h2>                          
                         </div>
                         <div class="col justify-content-end">
-                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.vocabs.create',$lernset->id) }}">Vokabeln hinzufügen</a> 
+                            <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.practise.index',$lernset->id) }}">Üben</a> 
                         </div>
                         <div class="col justify-content-end">
                             <a   class="btn btn-primary  center-block m-3 " href="{{ route('lernsets.vocabs.index',$lernset->id) }}">Vokabeln einsehen</a> 
