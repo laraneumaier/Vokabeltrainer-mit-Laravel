@@ -84,7 +84,7 @@
      window.onload = function () {
         let showButton= document.getElementById("showbutton");
         showButton.addEventListener("click", function(){
-                    let translation = document.getElementsByClassName("translation");
+                    let translation = document.getElementsByClassName("dtranslation");
                     for (var i=0; i < translation.length; i++) {
                             translation[i].classList.remove('invisible');
                             console.log(translation);

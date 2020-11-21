@@ -17,14 +17,16 @@
    
     <table class="table table-bordered mx-5">
         <tr>
+            <th>Nummer</th>
             <th>Deutsch</th>
             <th>Übersetzung</th>
             </tr>
             @foreach ($vocabs as $vocab)
             <tr>
+                <td> {{++$i}}</td>
                 <td>{{ $vocab->german }}</td>
                 <td> 
-                    <div class="translation invisible">
+                    <div class="dtranslation invisible">
                         <p >{{$vocab->translation}}</p>
                     </div>
                 </td>

@@ -11,7 +11,7 @@ class PractiseController extends Controller
 {
     public function index($lernset_id){
         $vocabs =  Vocab::all()->where('lernset_id', $lernset_id); // lernset or Vocab
-        return view('lernsets.practise.index', compact('vocabs', 'lernset_id'));
+        return view('lernsets.practise.index', compact('vocabs', 'lernset_id')) ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
 }
