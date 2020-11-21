@@ -29,9 +29,8 @@
                 <td>{{ $vocab->german }}</td>
                 <td>{{ $vocab->translation }}</td>
                 <td>
+                      <a class="btn btn-primary" href="{{route('lernsets.vocabs.edit', [$vocab->lernset_id, $vocab->id])}}">Edit</a>
                     <form action="{{ route('lernsets.vocabs.destroy', [$vocab->lernset_id, $vocab->id] )}}" class="" method="POST">
-        
-                        <a class="btn btn-primary" href="">Edit</a>
     
                         @csrf
                         @method('DELETE')
@@ -41,6 +40,8 @@
             </tr>
         @endforeach
     </table>
+
+    <a class="btn btn-primary" href="{{ route('lernsets.index') }}"> Zurück zur Übersicht</a>
   
       
 @endsection

@@ -57,6 +57,4 @@ class LernsetController extends Controller
     public function show($lernset_id){
         return redirect()->route('lernsets.vocabs.create', $lernset_id);
     }
-
-    
 }

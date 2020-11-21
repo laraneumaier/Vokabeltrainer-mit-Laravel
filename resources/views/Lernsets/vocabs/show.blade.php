@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2> Show Vocab</h2>
+                <h1> Show Vocab</h1>
             </div>
             <div class="pull-right">
                 <a class="btn btn-primary" href="{{ route('lernsets.vocabs.index') }}"> Back</a>

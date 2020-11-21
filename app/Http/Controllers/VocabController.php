@@ -47,4 +47,15 @@ class VocabController extends Controller
                         
     }
 
+    public function edit($lernset_id, vocab $vocab)
+    {
+        return view('lernsets.vocabs.edit', compact('lernset_id', 'vocab'));
+    }
+
+    public function update($lernset_id, Request $request, Vocab $vocab)
+    {
+        $vocab->update($request->all());
+        return redirect()->route('lernsets.vocabs.index', $lernset_id);
+    }
+
 }

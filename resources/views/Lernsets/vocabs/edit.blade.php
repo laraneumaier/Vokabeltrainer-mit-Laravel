@@ -1,13 +1,13 @@
-@extends('vocabs.layout')
+@extends('layouts.main')
    
 @section('content')
     <div class="row">
         <div class="col-lg-12 margin-tb">
             <div class="pull-left">
-                <h2>Edit Vocab</h2>
+                <h2>Voksabel bearbeiten</h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-primary" href="{{ route('vocabs.index') }}"> Back</a>
+                <a class="btn btn-primary" href=""> Back</a>
             </div>
         </div>
     </div>
@@ -23,7 +23,7 @@
         </div>
     @endif
   
-    <form action="{{ route('vocabs.update',$vocab->id) }}" method="POST">
+    <form action="{{ route('lernsets.vocabs.update', [$vocab->lernset_id, $vocab->id]) }}" method="Post">
         @csrf
         @method('PUT')
    
@@ -38,12 +38,6 @@
                 <div class="form-group">
                     <strong>translation:</strong>
                     <textarea class="form-control" style="height:150px" name="translation" placeholder="translation">{{ $vocab->translation }}</textarea>
-                </div>
-            </div>
-            <div class="col-xs-12 col-sm-12 col-md-12">
-                <div class="form-group">
-                    <strong>category:</strong>
-                    <input type="text" name="category" value="{{ $vocab->category }}" class="form-control" placeholder="category">
                 </div>
             </div>
             <div class="col-xs-12 col-sm-12 col-md-12 text-center">
