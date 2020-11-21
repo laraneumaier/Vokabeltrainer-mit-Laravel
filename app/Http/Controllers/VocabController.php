@@ -37,7 +37,7 @@ class VocabController extends Controller
             'translation' => 'required',
         ]);
         Vocab::create($request->all() + ['lernset_id' => $lernset_id]);
-        return redirect()->route('lernsets.vocabs.create', $lernset_id)->with('success','Vocab wurde erstellt.'); 
+        return redirect()->route('lernsets.vocabs.create', $lernset_id)->with('success','Vokabel wurde erstellt.'); 
     }
 
     public function destroy($lernset_id, Vocab $vocab)

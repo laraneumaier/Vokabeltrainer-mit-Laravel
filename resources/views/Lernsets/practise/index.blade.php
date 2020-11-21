@@ -14,32 +14,37 @@
             <p>{{ $message }}</p>
         </div>
     @endif
-    <p>Prüfe jetzt deine Vokabelkenntnisse</p>
-   
-    <table class="table table-bordered table-info">
-        <tr>
-            <th>Deutsch</th>
-            <th>Übersetzung</th>
-            </tr>
-            @foreach ($vocabs as $vocab)
+    
+    @if($vocabs->isEmpty())
+            <p>Du hast noch keine Vokabel erstellt.</p>
+    @else 
+        <p>Prüfe jetzt deine Vokabelkenntnisse</p>
+    
+        <table class="table table-bordered table-info">
             <tr>
-                <td>{{ $vocab->german }}</td>
-                <td> 
-                    <div class="dtranslation invisible">
-                        <p >{{$vocab->translation}}</p>
-                    </div>
-                </td>
-            </tr>
-        @endforeach
-    </table>
-        <button id="showbutton" class="btn btn-primary">Lösung anzeigen</button>
-        <button id="hidebutton" class="btn btn-primary">Lösung verbergen</button>
-        <a class="btn btn-outline-primary float-right" href="{{ route('lernsets.index') }}"> Fertig </a>
+                <th>Deutsch</th>
+                <th>Übersetzung</th>
+                </tr>
+                @foreach ($vocabs as $vocab)
+                <tr>
+                    <td>{{ $vocab->german }}</td>
+                    <td> 
+                        <div class="dtranslation invisible">
+                            <p >{{$vocab->translation}}</p>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
+        </table>
+            <button id="showbutton" class="btn btn-primary">Lösung anzeigen</button>
+            <button id="hidebutton" class="btn btn-primary">Lösung verbergen</button>
+            <a class="btn btn-outline-primary float-right" href="{{ route('lernsets.index') }}"> Fertig </a>
 
-        <div class="mt-3">
-             {{ $vocabs->links() }}
-        </div>
-</div>
+            <div class="mt-3">
+                {{ $vocabs->links() }}
+            </div>
+    </div>
+    @endif
 
 @endsection
 
