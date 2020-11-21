@@ -20,7 +20,7 @@ class VocabController extends Controller
     }
    
     public function index($lernset_id){
-        $vocabs =  Vocab::all()->where('lernset_id', $lernset_id); // lernset or Vocab
+        $vocabs =  Vocab::where('lernset_id', $lernset_id)->paginate(20); // lernset or Vocab
         return view('lernsets.vocabs.index', compact('vocabs', 'lernset_id'));
     }
 
