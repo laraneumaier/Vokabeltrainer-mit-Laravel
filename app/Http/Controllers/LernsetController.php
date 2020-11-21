@@ -1,5 +1,7 @@
 <?php
 
+/* Inspieriet von: https://www.itsolutionstuff.com/post/laravel-8-crud-application-tutorial-for-beginnersexample.html  */
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -51,7 +53,7 @@ class LernsetController extends Controller
         $lernset->delete();
     
         return redirect()->route('lernsets.index')
-                        ->with('success','Vocab deleted successfully');
+                        ->with('success','Lernset erfolgreich gelöscht');
     }
 
     public function show($lernset_id){

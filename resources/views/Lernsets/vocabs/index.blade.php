@@ -1,4 +1,6 @@
 @extends('layouts.home')
+
+<!-- Inspieriet von: https://www.itsolutionstuff.com/post/laravel-8-crud-application-tutorial-for-beginnersexample.html  -->
  
 @section('pcontent')
     <div class="text-center">

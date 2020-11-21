@@ -1,7 +1,8 @@
 <?php
 
-// https://laraveldaily.com/nested-resource-controllers-and-routes-laravel-crud-example/
-  
+/* Inspieriert von: Povilas Korop (https://laraveldaily.com/nested-resource-controllers-and-routes-laravel-crud-example/) */
+
+
 namespace App\Http\Controllers;
    
 use App\Models\Vocab;
@@ -20,7 +21,7 @@ class VocabController extends Controller
     }
    
     public function index($lernset_id){
-        $vocabs =  Vocab::where('lernset_id', $lernset_id)->paginate(20); // lernset or Vocab
+        $vocabs =  Vocab::where('lernset_id', $lernset_id)->paginate(20); 
         return view('lernsets.vocabs.index', compact('vocabs', 'lernset_id'));
     }
 
